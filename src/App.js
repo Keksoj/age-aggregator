@@ -1,6 +1,10 @@
 import React from 'react'
+
 import GetAge from './GetAge'
 import PersonsList from './PersonsList'
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+
 import './App.css'
 
 class App extends React.Component {
@@ -47,8 +51,11 @@ class App extends React.Component {
             <div className="appMain">
                 <div className="header">
                     <form onSubmit={this.addPerson}>
-                        <input
+                        <TextField
+                            id="outlined-basic"
+                            variant="outlined"
                             type="text"
+                            label="name"
                             placeholder="enter a name"
                             ref={(name) => (this._inputName = name)}
                         />
@@ -56,7 +63,13 @@ class App extends React.Component {
                             type="date"
                             ref={(date) => (this._inputDate = date)}
                         />
-                        <button type="submit">add</button>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            type="submit"
+                        >
+                            add
+                        </Button>
                     </form>
                 </div>
                 <div className="list">

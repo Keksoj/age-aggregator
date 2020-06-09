@@ -28,10 +28,7 @@ class GetAge extends React.Component {
     }
 
     getAgeInMillis(persons) {
-        const listOfBirthDates = []
-        persons.map((person) => {
-            listOfBirthDates.push(person.posixDate)
-        })
+        const listOfBirthDates = persons.map((person) => person.posixDate)
         const averageBirthDate =
             listOfBirthDates.reduce((a, b) => a + b, 0) / persons.length
 
