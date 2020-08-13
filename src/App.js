@@ -3,7 +3,6 @@ import React from 'react'
 import GetAge from './GetAge'
 import PersonsList from './PersonsList'
 import Button from '@material-ui/core/Button'
-import TextField from '@material-ui/core/TextField'
 
 import './App.css'
 
@@ -37,6 +36,7 @@ class App extends React.Component {
         console.log(this.state.persons)
         event.preventDefault()
     }
+
     deletePerson(key) {
         var filteredPersons = this.state.persons.filter((person) => {
             return person.key !== key
@@ -51,9 +51,7 @@ class App extends React.Component {
             <div className="appMain">
                 <div className="header">
                     <form onSubmit={this.addPerson}>
-                        <TextField
-                            id="outlined-basic"
-                            variant="outlined"
+                        <input
                             type="text"
                             label="name"
                             placeholder="enter a name"
@@ -61,6 +59,7 @@ class App extends React.Component {
                         />
                         <input
                             type="date"
+                            label="date"
                             ref={(date) => (this._inputDate = date)}
                         />
                         <Button

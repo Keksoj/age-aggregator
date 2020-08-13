@@ -38,8 +38,7 @@ class GetAge extends React.Component {
     }
 
     render() {
-        const persons = this.props.persons
-        const ageInMillis = this.getAgeInMillis(persons)
+        const ageInMillis = this.getAgeInMillis(this.props.persons)
         const formattedAge = formatTimeToYears(ageInMillis)
 
         return (
