@@ -43,11 +43,16 @@ class GetAge extends React.Component {
 
         return (
             <div className="AgeDisplay">
-                <p>The age in milliseconds: {ageInMillis}</p>
-                The {this.props.persons.length} of you are {formattedAge.year}{' '}
-                years, {formattedAge.month} months, {formattedAge.day} days,{' '}
-                {formattedAge.hour} hours, {formattedAge.minute} minutes and{' '}
-                {formattedAge.second} seconds old.
+                {/* <p>The age in milliseconds: {ageInMillis}</p> */}
+                The {this.props.persons.length} of you are:
+                <ul>
+                    <li>{formattedAge.year} years</li>
+                    <li>{formattedAge.month} months</li>
+                    <li>{formattedAge.day} days</li>
+                    <li>{formattedAge.hour} hours</li>
+                    <li>{formattedAge.minute} minutes</li>
+                    <li>and {formattedAge.second} seconds old.</li>
+                </ul>
             </div>
         )
     }

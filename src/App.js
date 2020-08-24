@@ -54,7 +54,7 @@ class App extends React.Component {
                         <input
                             type="text"
                             label="name"
-                            placeholder="enter a name"
+                            placeholder="add a person"
                             ref={(name) => (this._inputName = name)}
                         />
                         <input
@@ -71,7 +71,7 @@ class App extends React.Component {
                         </Button>
                     </form>
                 </div>
-                <div className="list">
+                <div className="PersonsList">
                     <PersonsList
                         persons={this.state.persons}
                         delete={this.deletePerson}
